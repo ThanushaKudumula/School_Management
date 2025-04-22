@@ -3,6 +3,9 @@ const app = express();
 require('dotenv').config();
 
 const schoolRoutes = require('./routes/schoolRoutes');
+app.get('/', (req, res) => {
+  res.send('✅ API is Live');
+});
 
 app.use(express.json());
 app.use('/api', schoolRoutes);
