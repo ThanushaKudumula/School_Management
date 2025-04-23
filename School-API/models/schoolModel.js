@@ -9,7 +9,7 @@ const addSchool = async (name, address, latitude, longitude) => {
 };
 
 const getAllSchools = async () => {
-  const [schools] = await db.execute('SELECT * FROM schools');
+  const [schools] = await db.execute('SELECT * FROM school');
   return schools;
 };
 
