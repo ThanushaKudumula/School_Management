@@ -2,7 +2,7 @@ const db = require('../config/db');
 
 const addSchool = async (name, address, latitude, longitude) => {
   const [result] = await db.execute(
-    'INSERT INTO schools (name, address, latitude, longitude) VALUES (?, ?, ?, ?)',
+    'INSERT INTO school (name, address, latitude, longitude) VALUES (?, ?, ?, ?)',
     [name, address, latitude, longitude]
   );
   return result;
